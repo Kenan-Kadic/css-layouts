@@ -41,13 +41,37 @@
         display: flex;
         align-items: center;
         justify-content: flex-start;
-        gap: 15px;
+        gap: 10px;
       }
 
       .el {
+        /* DEFAULTS
+
+        flex: is a shortcut for grow, shrink, basis
+
+        flex: 0;
+        flex: 1;
+        flex: 200px;
+
+        all in one line flex: 0 0 200px;
+
+        flex-grow: 0;
+        flex-shrink: 1;
+        flex-basis: auto; */
+
+        flex-basis: 200px;
+        /* makes elements 200px if all being 200 fits container, if container not large neough--FLEXBOS may shrink some items to make them all fit */
+        flex-shrink: 0;
+        /* If you set flex shrink to 0, contents will be exactly 200px but will overflow their container */
+
+        /* if you set FLEX GROW to 1 it will try to fill up all the width space in the container by making each element larger */
+        /* flex-grow: 1; */
       }
 
       .el--1 {
+        /* if you use FLEX-GROW:1 just on first element--it will become super wide and fill up all the remaining space
+        if you did FLEX-GROW:2 on one element it would be bigger than the other elements - it is not double the size--it is DOUBLE OF AVAILABLE EMPTY SPACE
+        */
         align-self: flex-start;
       }
 

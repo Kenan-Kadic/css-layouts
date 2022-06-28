@@ -127,6 +127,12 @@ li:last-child {
   font-weight: bold;
 }
 
+.author {
+  margin-bottom: 0;
+  margin-left: 15px;
+  margin-bottom: 15px;
+}
+
 /* ul {
   list-style: none;
 } */
@@ -197,7 +203,6 @@ nav a:link {
   display: block; */
 
   margin-right: 30px;
-  margin-top: 10px;
   display: inline-block;
 }
 
@@ -244,7 +249,41 @@ h2::before {
   right: -25px;
 }
 
-/* Resolving conflicts */
+/* FLEXBOX INTRODUCED HERE */
+.main-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.author-box {
+  display: flex;
+  align-items: center;
+}
+
+.related-post {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.related-link:link {
+  font-size: 17px;
+  font-weight: bold;
+  font-style: normal;
+  display: inline-block;
+  margin-bottom: 5px;
+}
+
+.related-author {
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: normal;
+  font-style: italic;
+}
+
+/* RESOLVING CONFLICTS */
 /* #copyright {
   color: red;
 }
@@ -266,18 +305,19 @@ nav p {
   font-size: 18px;
 } */
 
-/* FLOATS */
+/* -------------------------------
+FLOATS which no one uses anymore
 .author-img {
   float: left;
   margin-bottom: 20px;
-  /* this take image completely out of the flow of page */
-}
+  this take image completely out of the flow of page 
+} */
 
-.author {
+/* .author {
   margin-top: 10px;
   float: left;
   margin-left: 20px;
-}
+} */
 
 /* if both children of an element are floated, the parent element will lose its height */
 
@@ -285,11 +325,11 @@ nav p {
 
 /* the container element will not adjust its height to the floated element */
 
-h1 {
+/* h1 {
   float: left;
-}
+} */
 
-nav {
+/* nav {
   float: right;
 }
 
@@ -316,4 +356,4 @@ aside {
 footer {
   background-color: yellow;
   clear: both;
-}
+} */ ;
