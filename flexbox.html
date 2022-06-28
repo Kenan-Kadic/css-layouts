@@ -38,26 +38,75 @@
         background-color: #ddd;
         font-size: 40px;
         margin: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 15px;
+      }
 
-        /* FLEXBOX */
-        /* display: flex puts all elements side by side
+      .el {
+      }
+
+      .el--1 {
+        align-self: flex-start;
+      }
+
+      .el--5 {
+        align-self: stretch;
+        /* height will go to the element that has biggest height */
+        order: 1;
+      }
+
+      .el--6 {
+        /* default order is zero
+        positive numbers go right
+        negative numbers go left */
+        order: -2;
+      }
+
+      .el--7 {
+        order: -1;
+      }
+
+      /* FLEXBOX */
+
+      /* a set of related css properties used to build one dimentional layouts
+          The goal was to allow browser to automatically divide the emtpy space in a container by its child elements.
+          Flexbox solves common problems like vertical centering and creating equal-height columns
+        */
+
+      /* FLEX CONTAINER - the element on which you want to use flexbox
+           That is where you set display: flex
+           FLEX ITEMS - these are the child elements inside the FLEX CONTAINER
+           X axis is called MAIN AXIS  Y axis is called CROSS AXIS
+        */
+
+      /* FLEX CONTAINER has in it
+        gap: 0
+            this means to create space between items, without using margins
+        
+        justify-content: flex start    
+            to align items along the Main or x-axis
+
+        align-items: stretch
+            to align items along the y axis    
+        */
+
+      /* display: flex puts all elements side by side
         these are the FLEX ITEMS part of the FLEX CONTAINER */
 
-        /* Horizontally each element takes up as much space as necessary to show the text */
+      /* Horizontally each element takes up as much space as necessary to show the text */
 
-        /* Vertically all elements are as tall as the tallest element */
-        display: flex;
+      /* Vertically all elements are as tall as the tallest element */
 
-        /* with this things get vertially aligned at center */
-        /* the default align items is stretch. */
-        /* stretch means all elements will stretch as tall as tallest element */
-        /* you have start, center, and end */
-        align-items: center;
+      /* with this things get vertially aligned at center */
+      /* the default align items is stretch. */
+      /* stretch means all elements will stretch as tall as tallest element */
+      /* you have start, center, and end */
 
-        /* this will center content inside the container */
-        justify-content: center;
-        /* you also have space between--even space between all elements */
-      }
+      /* this justify content center will center content inside the container */
+
+      /* you also have space between--even space between all elements */
     </style>
   </head>
   <body>
