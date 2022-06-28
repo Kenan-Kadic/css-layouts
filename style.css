@@ -50,6 +50,8 @@ aside {
   border-top: 5px solid #1098ad;
   border-bottom: 5px solid #1098ad;
   padding: 50px 40px;
+  /* how to force something to be 300 pixels--no grow or shrink */
+  flex: 0 0 300px;
 }
 
 /* SMALLER ELEMENTS */
@@ -281,6 +283,16 @@ h2::before {
   font-size: 14px;
   font-weight: normal;
   font-style: italic;
+}
+
+.row {
+  display: flex;
+  gap: 75px;
+}
+
+article {
+  /* if you just put flex 1, that means GROW AS MUCH AS YOU CAN in the container you are */
+  flex: 1;
 }
 
 /* RESOLVING CONFLICTS */
